@@ -5,6 +5,7 @@ img {
 
 /* Frame the image in grey when the player places his mouse over it */
 img:hover {
+    border: solid;
   border-color: grey;
 }
 
