@@ -3,6 +3,11 @@ img {
     border-color: white;
 }
 
+/* Frame the image in grey when the player places his mouse over it */
+img:hover {
+  border-color: grey;
+}
+
 /* Style the "Add" button */
 .addBtn {
   padding: 10px;
