@@ -6,7 +6,7 @@ var imgs   = [ "images/earth.jpg", "images/mars.jpg", "images/titan.jpg",
                "images/kepler16b.jpg", "images/kepler186f.jpg", "images/55-cancri-e.jpg",
                "images/nightlife.jpg" ];
                
-var placeholder = "images/placeholder.jpg";
+var placeholder = "images/placeholder.png";
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
