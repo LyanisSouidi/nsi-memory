@@ -1,5 +1,14 @@
-function settings() {
-    document.getElementById("settings-overlay").style.display="block";
+function settings(a) {
+    if (a == "1") {
+        document.getElementById("settings-overlay").style.display="block";
+        document.getElementById("btnClose").style.display="none"
+        document.getElementById("restartBtn").innerHTML = "Lancer le jeu";
+    } else {
+        document.getElementById("settings-overlay").style.display="block";
+        document.getElementById("btnClose").style.display="block";
+        document.getElementById("restartBtn").innerHTML = "Sauvegarder les modifications et relancer le jeu";
+    }
+    
 }
 
 function restart() {
@@ -7,10 +16,10 @@ function restart() {
     document.getElementById("settings").style.display="inline";
     document.getElementById("startBtn").style.display="none";
     document.getElementById("game").style.display="block"
+    init()
 }
 
 // ***************** Jeu *****************
-
 
 var imgs   = [ "images/earth.jpg", "images/mars.jpg", "images/titan.jpg",
                "images/venus.jpg", "images/ceres.jpg", "images/jupiter.jpg",
@@ -46,6 +55,12 @@ function generateImageList(numberOfPair, trumpCard) {
     for (var i = 0; i < numberOfPair; i+=1) {
         imageList.push(imgs[i]);
         imageList.push(imgs[i]);
+    }
+	if (trumpCard == true) {
+		imageList.push(imgs[i+1]);
+		document.getElementById("21").style.display="initial";
+	} else {
+        document.getElementById("21").style.display="none";
     }
 
     shuffle(imageList);

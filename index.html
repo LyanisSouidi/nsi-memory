@@ -10,7 +10,7 @@
     <body>
         <h1 class="title">Memory game</h1>
         <div class="main">
-            <a class="start" id="startBtn" onclick="settings()"><strong>Lancer le jeu</strong></a>
+            <a class="start" id="startBtn" onclick="settings(1)"><strong>Lancer le jeu</strong></a>
 
             <div id="settings-overlay" class="settings-overlay">
                 <div id="popup" class="popup">
@@ -48,48 +48,46 @@
                             <label>Blitz 1m+10s</label>
                             <br><br>
                         </div>
-                        <button class="restartBtn" onclick="restart()">Lancer le jeu</button>
+                        <button class="restartBtn" id="restartBtn" onclick="restart()">Lancer le jeu</button>
                     </div>
                 </div>
             </div>
 
-            <div class="game" id="game" onload="init()" style="display: none">
+            <div class="game" id="game" style="display: none">
                 <div id="header" style="width: 100%">
                     <div style="float: left; width: 50%"><h2 id="coups">Coups: <span id="ncoups">0</span></h2></div>
                     <div style="float: right; width: 50%"><h2 id="temps">Temps: <span id="ntemps">0</span></h2></div>
                 </div>
 
-                <div class="cards">
-                    <table style="width:100%">
-                        <tr>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        </tr>
-                        <tr>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        </tr>
-                        <tr>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
-                        <td><img class="available" src="images/placeholder.png" width="120" height="180" style="display: none"/></td>
-                        </tr>
-                    </table>
-                </div>
+                <table style="width:100%">
+                    <tr>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    </tr>
+                    <tr>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    </tr>
+                    <tr>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" src="images/placeholder.png" width="120" height="180"/></td>
+                    <td><img class="available" id="21" src="images/placeholder.png" width="120" height="180"/></td>
+                    </tr>
+                </table>
             </div>
         </div>
 

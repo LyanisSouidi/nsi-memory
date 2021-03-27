@@ -7,34 +7,38 @@ body{
 
 .main{
   min-height: 100%;
+  margin: 8;
 }
 
 h1.title{
     color: #676153;
     font-family: 'Bowlby One SC';
-    left: 35%;
-    right: 35%;
     text-align: center;
 }
 
 footer{
   background: #ccc;
-  bottom: 0;
   width: 100%;
   padding-top: 10px;
+  padding-bottom: 5px;
   height: 40px;  
   clear: both;
+  position: absolute;
+  bottom: -10%;
 }
 
 .footer1{
-  position: absolute;
   left: 1%;
   top: 31%;
+  margin-left: 1%;
+  margin-right: 20%;
 }
 
 .github-link{
   position: absolute;
   right: 1%;
+  bottom: -8%;
+  padding-bottom: 1%;
 }
 
 /* Popup */
