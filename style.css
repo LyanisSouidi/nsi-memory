@@ -3,11 +3,12 @@ body{
   padding: 0;
   background-color: #fad87f; 
   min-height: 100%;
+  margin-top: -1%;
 }
 
 .main{
   min-height: 100%;
-  margin: 8;
+  margin: 8px;
 }
 
 h1.title{
