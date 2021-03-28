@@ -12,8 +12,8 @@ Les règles complètes du Memory peuvent être trouvées sur Internet :
 Pour se faire, je vous conseille fortement d’utiliser comme base le code fourni ici : https://www.leprofd.info/js/memory.zip
 
 ###  1.1 Niveau 0 : Cahier des charges
-- [ ] 1. Lorsque le joueur place sa souris sur une image non révélée, celle-ci est encadrée en gris.
-- [ ] 2. Si le joueur clique sur une image, cette image est révélée et est encadrée en noir.
+- [x] 1. Lorsque le joueur place sa souris sur une image non révélée, celle-ci est encadrée en gris.
+- [x] 2. Si le joueur clique sur une image, cette image est révélée et est encadrée en noir.
 - [ ] 3. Après que le joueur ait sélectionné deux images :
 	- - [ ] Si les images sont identiques, elles restent révélées et seront encadrées en bleu.
 	- - [ ] Si les images sont différentes, elles sont remises face cachée, non encadrée.

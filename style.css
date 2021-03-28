@@ -203,7 +203,17 @@ img {
   border-color: #fad87f;
 }
 
-img:hover {
+.available:hover{
   border: solid;
   border-color: grey;
+}
+
+.revealed{
+  border: solid;
+  border-color: black;
+}
+
+.found{
+  border: solid;
+  border-color: black;
 }

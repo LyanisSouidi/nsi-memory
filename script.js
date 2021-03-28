@@ -87,6 +87,7 @@ function init() {
         elems[i].onclick = function() {
             var elemId = this.getAttribute("data-elemId");
             this.src = imageList[elemId];
+            this.className="revealed";
         }
     }
 
