@@ -1,22 +1,25 @@
+// ***************** Menu de configuration *****************
+
 function settings(a) {
-    if (a == "1") {
+    if (a == "openStart") {
+        document.getElementById("startBtn").style.display="none";
         document.getElementById("settings-overlay").style.display="block";
         document.getElementById("btnClose").style.display="none"
         document.getElementById("restartBtn").innerHTML = "Lancer le jeu";
-    } else {
+    } 
+    
+    if (a == "openIngame") {
+        chronoPause();
         document.getElementById("settings-overlay").style.display="block";
         document.getElementById("btnClose").style.display="block";
         document.getElementById("restartBtn").innerHTML = "Sauvegarder les modifications et relancer le jeu";
     }
-    
-}
 
-function restart() {
-    document.getElementById("settings-overlay").style.display="none";
-    document.getElementById("settings").style.display="inline";
-    document.getElementById("startBtn").style.display="none";
-    document.getElementById("game").style.display="block"
-    init()
+    if (a == "closeIngame") {
+        document.getElementById("settings-overlay").style.display="none";
+        chronoContinue();
+    }
+    
 }
 
 // ***************** Jeu *****************
@@ -67,6 +70,10 @@ function generateImageList(numberOfPair, trumpCard) {
 }
 
 function init() {
+    document.getElementById("settings-overlay").style.display="none";
+    document.getElementById("settings").style.display="inline";
+    document.getElementById("game").style.display="block";
+
     generateImageList(10, false);
 
     var elems = document.getElementsByTagName("img");
@@ -82,4 +89,41 @@ function init() {
             this.src = imageList[elemId];
         }
     }
+
+    chronoStart();
+}
+
+// ***************** Chronomètre *****************
+
+var startTime = 0
+var start = 0
+var end = 0
+var diff = 0
+var timerID = 0
+function chrono(){
+	end = new Date()
+	diff = end - start
+	diff = new Date(diff)
+	var sec = diff.getSeconds()
+	var min = diff.getMinutes()
+	if (min < 10){
+		min = "0" + min
+	}
+	if (sec < 10){
+		sec = "0" + sec
+	}
+	document.getElementById("chronotime").innerHTML = min + ":" + sec
+	timerID = setTimeout("chrono()", 10)
+}
+function chronoStart(){
+	start = new Date()
+	chrono()
+}
+function chronoContinue(){
+	start = new Date()-diff
+	start = new Date(start)
+	chrono()
+}
+function chronoPause(){
+	clearTimeout(timerID)
 }

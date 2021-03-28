@@ -10,13 +10,13 @@
     <body>
         <h1 class="title">Memory game</h1>
         <div class="main">
-            <a class="start" id="startBtn" onclick="settings(1)"><strong>Lancer le jeu</strong></a>
+            <a class="start" id="startBtn" onclick="settings('openStart')"><strong>Lancer le jeu</strong></a>
 
             <div id="settings-overlay" class="settings-overlay">
                 <div id="popup" class="popup">
                     <h2>
                         Configuration du jeu 
-                        <span id="btnClose" class="btnClose" onclick="restart()">&times;</span>
+                        <span id="btnClose" class="btnClose" onclick="settings('closeIngame')">&times;</span>
                     </h2>
                     <div>
                         <br>
@@ -48,7 +48,7 @@
                             <label>Blitz 1m+10s</label>
                             <br><br>
                         </div>
-                        <button class="restartBtn" id="restartBtn" onclick="restart()">Lancer le jeu</button>
+                        <button class="restartBtn" id="restartBtn" onclick="init()">Lancer le jeu</button>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
             <div class="game" id="game" style="display: none">
                 <div id="header" style="width: 100%">
                     <div style="float: left; width: 50%"><h2 id="coups">Coups: <span id="ncoups">0</span></h2></div>
-                    <div style="float: right; width: 50%"><h2 id="temps">Temps: <span id="ntemps">0</span></h2></div>
+                    <div style="float: right; width: 50%"><h2 id="temps">Temps: <span id="chronotime">00:00</span></h2></div>
                 </div>
 
                 <table style="width:100%">
@@ -93,7 +93,7 @@
 
         <footer>
             <div class="footer1">
-                <button id="settings" class="settings" onclick="settings()" style="display: none">
+                <button id="settings" class="settings" onclick="settings('openIngame')" style="display: none">
                     <svg width="24" height="24" viewBox="0, 0, 24, 24">
                         <path id="gear" d="M3 4h3v2h-3zM12 4h9v2h-9zM8 3h2c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-2c0-.552.448-1 1-1zM3 11h9v2h-9zM18 11h3v2h-3zM14 10h2c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-2c0-.552.448-1 1-1zM3 18h6v2h-6zM15 18h6v2h-6zM11 17h2c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-2c0-.552.448-1 1-1z"/>
                     </svg>
