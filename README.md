@@ -25,7 +25,7 @@ Indication : Pour “encadrer” une image, vous modifierez l’attribut CSS `bo
 
 ### 1.2 Niveau 1 : Mode carte seule
 
-- [ ] Si le bouton “Trump card” est coché lorsque l’on relance la partie, une 21me image est utilisée. Le jeu comprendra donc 10 paires et 1 image seule. Le jeu se termine également lorsque toutes les images sont révélées. Cela signifie donc que l’on doit révéler l’image seule en dernière.
+- [x] Si le bouton “Trump card” est coché lorsque l’on relance la partie, une 21me image est utilisée. Le jeu comprendra donc 10 paires et 1 image seule. Le jeu se termine également lorsque toutes les images sont révélées. Cela signifie donc que l’on doit révéler l’image seule en dernière.
 
 ### 1.3 Niveau 1 : Gestion du temps
 

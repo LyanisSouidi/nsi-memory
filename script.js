@@ -74,7 +74,11 @@ function init() {
     document.getElementById("settings").style.display="inline";
     document.getElementById("game").style.display="block";
 
-    generateImageList(10, false);
+    if (document.getElementById("formTrump").checked == true) {
+        generateImageList(10, true);
+    } else {
+        generateImageList(10, false);
+    }
 
     var elems = document.getElementsByTagName("img");
     for (var i = 0; i < 21; i++) {
