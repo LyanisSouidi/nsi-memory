@@ -73,7 +73,7 @@ function init() {
     document.getElementById("popup").style.display="none";
     document.getElementById("settings").style.display="inline";
     document.getElementById("game").style.display="block";
-
+    var ncoups = 0;
     if (document.getElementById("formTrump").checked == true) {
         generateImageList(10, true);
     } else {
@@ -89,6 +89,10 @@ function init() {
         elems[i].setAttribute("data-elemId", i);
         
         elems[i].onclick = function() {
+            if (this.classList.contains('available')) {
+                ncoups = ncoups + 1
+                document.getElementById("ncoups").innerHTML = ncoups;
+            }
             var elemId = this.getAttribute("data-elemId");
             this.src = imageList[elemId];
             this.className="revealed";
