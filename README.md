@@ -17,7 +17,7 @@ Pour se faire, je vous conseille fortement d’utiliser comme base le code fourn
 - [ ] 3. Après que le joueur ait sélectionné deux images :
 	- - [ ] Si les images sont identiques, elles restent révélées et seront encadrées en bleu.
 	- - [ ] Si les images sont différentes, elles sont remises face cachée, non encadrée.
-	- - [ ] Dans tous les cas, le nombre de coups est augmenté de 1.
+	- - [x] Dans tous les cas, le nombre de coups est augmenté de 1.
 - [ ] 4. Lorsque toutes les images sont révélées, un popup apparaît indiquant “Vous avez gagné en X coups”, X étant le nombre de coups utilisés.
 - [ ] 5. Cliquer sur le bouton “Relancer” relance la partie : — Les images sont remélangées et replacées face cachées, — Aucune image n’est encadrée. — Le nombre de coups repasse à 0.
 
@@ -34,7 +34,7 @@ Indication : Pour “encadrer” une image, vous modifierez l’attribut CSS `bo
 - - [ ] Niveau 2 : Lorsqu’un joueur a révélé deux images différentes, ces deux images restent visibles jusqu’à ce qu’un joueur clique sur une nouvelle image ou que 2 secondes se soit écoulés.
 
 - [x] **Temps de réflexion**
-- - [x] Niveau 1 : Le nombre de secondes écoulées depuis le début de la partie est affiché sur la page Web.
+- - [ ] Niveau 1 : Le nombre de secondes écoulées depuis le début de la partie est affiché sur la page Web.
 - - [x] Niveau 2 : Le temps écoulés depuis le début de la partie est affiché sur la page Web au format “mm :ss” (nombres de minutes “ :” nombre de secondes sur deux chiffres).
 
 - [ ] **Mode Blitz**
