@@ -54,7 +54,7 @@ var imageList;
 
 function generateImageList(numberOfPair, trumpCard) {
     shuffle(imgs);
-    imageList = []
+    imageList = [];
     for (var i = 0; i < numberOfPair; i+=1) {
         imageList.push(imgs[i]);
         imageList.push(imgs[i]);
@@ -90,7 +90,7 @@ function init() {
         
         elems[i].onclick = function() {
             if (this.classList.contains('available')) {
-                ncoups = ncoups + 1
+                ncoups = ncoups + 1;
                 document.getElementById("ncoups").innerHTML = ncoups;
             }
             var elemId = this.getAttribute("data-elemId");
@@ -104,35 +104,35 @@ function init() {
 
 // ***************** Chronomètre *****************
 
-var startTime = 0
-var start = 0
-var end = 0
-var diff = 0
-var timerID = 0
+var startTime = 0;
+var start = 0;
+var end = 0;
+var diff = 0;
+var timerID = 0;
 function chrono(){
-	end = new Date()
-	diff = end - start
-	diff = new Date(diff)
-	var sec = diff.getSeconds()
-	var min = diff.getMinutes()
+	end = new Date();
+	diff = end - start;
+	diff = new Date(diff);
+	var sec = diff.getSeconds();
+	var min = diff.getMinutes();
 	if (min < 10){
-		min = "0" + min
+		min = "0" + min;
 	}
 	if (sec < 10){
-		sec = "0" + sec
+		sec = "0" + sec;
 	}
-	document.getElementById("chronotime").innerHTML = min + ":" + sec
-	timerID = setTimeout("chrono()", 10)
+	document.getElementById("chronotime").innerHTML = min + ":" + sec;
+	timerID = setTimeout("chrono()", 10);
 }
 function chronoStart(){
-	start = new Date()
-	chrono()
+	start = new Date();
+	chrono();
 }
 function chronoContinue(){
-	start = new Date()-diff
-	start = new Date(start)
-	chrono()
+	start = new Date()-diff;
+	start = new Date(start);
+	chrono();
 }
 function chronoPause(){
-	clearTimeout(timerID)
+	clearTimeout(timerID);
 }
