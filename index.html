@@ -10,13 +10,13 @@
     <body>
         <h1 class="title">Memory game</h1>
         <div class="main">
-            <a class="start" id="startBtn" onclick="settings('openStart')"><strong>Lancer le jeu</strong></a>
+            <a class="start" id="startBtn" onclick="popup('openStart')"><strong>Lancer le jeu</strong></a>
 
-            <div id="settings-overlay" class="settings-overlay">
-                <div id="popup" class="popup">
+            <div id="popup" class="popup">
+                <div id="popup-content" class="popup-content">
                     <h2>
                         Configuration du jeu 
-                        <span id="btnClose" class="btnClose" onclick="settings('closeIngame')">&times;</span>
+                        <span id="btnClose" class="btnClose" onclick="popup('closeIngame')">&times;</span>
                     </h2>
                     <div>
                         <br>
@@ -93,7 +93,7 @@
 
         <footer>
             <div class="footer1">
-                <button id="settings" class="settings" onclick="settings('openIngame')" style="display: none">
+                <button id="settings" class="settings" onclick="popup('openIngame')" style="display: none">
                     <svg width="24" height="24" viewBox="0, 0, 24, 24">
                         <path id="gear" d="M3 4h3v2h-3zM12 4h9v2h-9zM8 3h2c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-2c0-.552.448-1 1-1zM3 11h9v2h-9zM18 11h3v2h-3zM14 10h2c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-2c0-.552.448-1 1-1zM3 18h6v2h-6zM15 18h6v2h-6zM11 17h2c.552 0 1 .448 1 1v2c0 .552-.448 1-1 1h-2c-.552 0-1-.448-1-1v-2c0-.552.448-1 1-1z"/>
                     </svg>

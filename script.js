@@ -1,22 +1,22 @@
 // ***************** Menu de configuration *****************
 
-function settings(a) {
+function popup(a) {
     if (a == "openStart") {
         document.getElementById("startBtn").style.display="none";
-        document.getElementById("settings-overlay").style.display="block";
+        document.getElementById("popup").style.display="block";
         document.getElementById("btnClose").style.display="none"
         document.getElementById("restartBtn").innerHTML = "Lancer le jeu";
     } 
     
     if (a == "openIngame") {
         chronoPause();
-        document.getElementById("settings-overlay").style.display="block";
+        document.getElementById("popup").style.display="block";
         document.getElementById("btnClose").style.display="block";
         document.getElementById("restartBtn").innerHTML = "Sauvegarder les modifications et relancer le jeu";
     }
 
     if (a == "closeIngame") {
-        document.getElementById("settings-overlay").style.display="none";
+        document.getElementById("popup").style.display="none";
         chronoContinue();
     }
     
@@ -70,7 +70,7 @@ function generateImageList(numberOfPair, trumpCard) {
 }
 
 function init() {
-    document.getElementById("settings-overlay").style.display="none";
+    document.getElementById("popup").style.display="none";
     document.getElementById("settings").style.display="inline";
     document.getElementById("game").style.display="block";
 
