@@ -74,6 +74,7 @@ function init() {
     document.getElementById("settings").style.display="inline";
     document.getElementById("game").style.display="block";
     var ncoups = 0;
+    var oldcard = 0;
     if (document.getElementById("formTrump").checked == true) {
         generateImageList(10, true);
     } else {
@@ -92,10 +93,27 @@ function init() {
             if (this.classList.contains('available')) {
                 ncoups = ncoups + 1;
                 document.getElementById("ncoups").innerHTML = ncoups;
-            }
+            }            
             var elemId = this.getAttribute("data-elemId");
             this.src = imageList[elemId];
             this.className="revealed";
+            if (oldcard != 0) {
+                if (oldcard.classList.contains('revealed')) {
+                    console.log("oldcard.classList.contains('revealed') // True")
+                    if (oldcard.src == this.src) {
+                        console.log("oldcard.src == this.src // True")
+                        oldcard.className="found";
+                        this.className="found";
+                    } else {
+                        console.log("oldcard.src == this.src // False")
+                    }
+                } else {
+                    console.log("oldcard.classList.contains('revealed') // False")
+                    console.log("oldcard.src == this.src // False")
+                }
+            }
+            oldcard = this;
+            
         }
     }
 
