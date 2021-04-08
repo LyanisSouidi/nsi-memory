@@ -99,21 +99,13 @@ function init() {
             this.className="revealed";
             if (oldcard != 0) {
                 if (oldcard.classList.contains('revealed')) {
-                    console.log("oldcard.classList.contains('revealed') // True")
                     if (oldcard.src == this.src) {
-                        console.log("oldcard.src == this.src // True")
                         oldcard.className="found";
                         this.className="found";
-                    } else {
-                        console.log("oldcard.src == this.src // False")
                     }
-                } else {
-                    console.log("oldcard.classList.contains('revealed') // False")
-                    console.log("oldcard.src == this.src // False")
                 }
             }
             oldcard = this;
-            
         }
     }
 
